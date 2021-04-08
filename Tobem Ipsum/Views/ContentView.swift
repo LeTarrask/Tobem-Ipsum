@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var generator: StringGenerator = StringGenerator()
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            if generator.generatedText == "" {
+                InputView(generator: generator) // output of this view is to generate text
+            } else {
+                OutputView(generator: generator) // output of this view is simply go back to InputView
+            }
+            Button(action: {
+                NSApplication.shared.terminate(self)
+            })
+            {
+                Text("Quit App")
+                .font(.caption)
+                .fontWeight(.semibold)
+            }
+        }
     }
 }
 

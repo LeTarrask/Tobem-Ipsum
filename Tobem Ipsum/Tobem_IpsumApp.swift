@@ -13,7 +13,7 @@ struct Tobem_IpsumApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView() // we don't need a window here
         }
     }
 }
