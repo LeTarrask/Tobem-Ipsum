@@ -13,7 +13,7 @@ struct OutputView: View {
     var body: some View {
         VStack {
             Text(generator.generatedText)
-                .lineLimit(50)
+                .lineLimit(nil)
                 .padding()
             HStack {
                 Button("Generate other") {
@@ -30,10 +30,10 @@ struct OutputView: View {
     }
 }
 
-//struct OutputView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        let generator = StringGenerator()
-//        let test = generator.createParagraph(with: 8)
-//        return OutputView(output: test)
-//    }
-//}
+struct OutputView_Previews: PreviewProvider {
+    static var previews: some View {
+        let generator = StringGenerator()
+        generator.generate(vocabs: 0, sentences: 0, paragraphs: 3)
+        return OutputView(generator: generator)
+    }
+}

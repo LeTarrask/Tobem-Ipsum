@@ -19,7 +19,6 @@ class StatusBarController {
         self.popover = popover
 
         statusBar = NSStatusBar.init()
-        // Creating a status bar item having a fixed length
         statusItem = statusBar.statusItem(withLength: 28.0)
 
         if let statusBarButton = statusItem.button {
@@ -47,11 +46,13 @@ class StatusBarController {
     func showPopover(_ sender: AnyObject) {
         if let statusBarButton = statusItem.button {
             popover.show(relativeTo: statusBarButton.bounds, of: statusBarButton, preferredEdge: NSRectEdge.maxY)
+            eventMonitor?.start()
         }
     }
 
     func hidePopover(_ sender: AnyObject) {
         popover.performClose(sender)
+        eventMonitor?.stop()
     }
 
     func mouseEventHandler(_ event: NSEvent?) {
