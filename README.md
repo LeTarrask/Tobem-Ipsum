@@ -26,3 +26,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * To Jessier Quirino for his amazing words.
 * Brisa, for her inspiration
+* [Anagh Sharma](https://www.anaghsharma.com/blog/macos-menu-bar-app-with-swiftui/)
