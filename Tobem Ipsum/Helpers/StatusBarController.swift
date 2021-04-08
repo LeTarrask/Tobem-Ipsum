@@ -8,8 +8,8 @@
 import Foundation
 import AppKit
 
-// helper tutorial https://www.anaghsharma.com/blog/macos-menu-bar-app-with-swiftui/
 class StatusBarController {
+    /// Initialize pop over window when icon is toggled in status bar
     private var statusBar: NSStatusBar
     private var statusItem: NSStatusItem
     private var popover: NSPopover
@@ -30,7 +30,7 @@ class StatusBarController {
             statusBarButton.target = self
         }
 
-        // Initializing monitor for mouse clicks outside the app
+        /// Initializing monitor for mouse clicks outside the app
         eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown], handler: mouseEventHandler)
     }
 

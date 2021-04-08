@@ -13,9 +13,9 @@ struct ContentView: View {
     var body: some View {
         VStack {
             if generator.generatedText == "" {
-                InputView(generator: generator) // output of this view is to generate text
+                InputView(generator: generator)
             } else {
-                OutputView(generator: generator) // output of this view is simply go back to InputView
+                OutputView(generator: generator) 
             }
             Button(action: {
                 NSApplication.shared.terminate(self)

@@ -8,6 +8,7 @@
 import Cocoa
 
 class EventMonitor {
+    /// Monitors whether user has clicked out of the app window, closing it.
     private var monitor: Any?
     private let mask: NSEvent.EventTypeMask
     private let handler: (NSEvent?) -> Void

@@ -17,7 +17,7 @@ struct OutputView: View {
                 .padding()
             HStack {
                 Button("Generate other") {
-                    generator.generatedText = ""
+                    generator.reset()
                 }
 
                 Button("Copy to clipboard") {
