@@ -24,17 +24,12 @@ struct MainViewSwitcher: View {
                 }
             }
             HStack {
-                Button(action: {
-                    setUp.toggle()
-                }) {
+                Button { setUp.toggle() } label: {
                     Text("Change dictionary")
-                        .font(.caption)
-                        .fontWeight(.semibold)
+                                .font(.caption)
+                                .fontWeight(.semibold)
                 }
-                Button(action: {
-                    NSApplication.shared.terminate(self)
-                })
-                {
+                Button { NSApplication.shared.terminate(self) } label: {
                     Text("Quit App")
                         .font(.caption)
                         .fontWeight(.semibold)

@@ -35,10 +35,9 @@ class StatusBarController {
     }
 
     @objc func togglePopover(sender: AnyObject) {
-        if(popover.isShown) {
+        if popover.isShown {
             hidePopover(sender)
-        }
-        else {
+        } else {
             showPopover(sender)
         }
     }
@@ -56,7 +55,7 @@ class StatusBarController {
     }
 
     func mouseEventHandler(_ event: NSEvent?) {
-        if(popover.isShown) {
+        if popover.isShown {
             hidePopover(event!)
         }
     }

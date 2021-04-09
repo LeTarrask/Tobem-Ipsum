@@ -10,7 +10,7 @@
 		7912066626206CD2008FF6CF /* DictionaryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912066526206CD2008FF6CF /* DictionaryPicker.swift */; };
 		7912066C26206D5D008FF6CF /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912066B26206D5D008FF6CF /* Vocabulary.swift */; };
 		7912067726206E67008FF6CF /* EnumPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912067626206E67008FF6CF /* EnumPicker.swift */; };
-		79612592261F2D7F00F8EA47 /* Tobem_IpsumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79612591261F2D7F00F8EA47 /* Tobem_IpsumApp.swift */; };
+		79612592261F2D7F00F8EA47 /* TobemIpsumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79612591261F2D7F00F8EA47 /* TobemIpsumApp.swift */; };
 		79612594261F2D7F00F8EA47 /* MainViewSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79612593261F2D7F00F8EA47 /* MainViewSwitcher.swift */; };
 		79612596261F2D8500F8EA47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79612595261F2D8500F8EA47 /* Assets.xcassets */; };
 		79612599261F2D8500F8EA47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79612598261F2D8500F8EA47 /* Preview Assets.xcassets */; };
@@ -47,7 +47,7 @@
 		7912066B26206D5D008FF6CF /* Vocabulary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vocabulary.swift; sourceTree = "<group>"; };
 		7912067626206E67008FF6CF /* EnumPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumPicker.swift; sourceTree = "<group>"; };
 		7961258E261F2D7F00F8EA47 /* Tobem Ipsum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tobem Ipsum.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		79612591261F2D7F00F8EA47 /* Tobem_IpsumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tobem_IpsumApp.swift; sourceTree = "<group>"; };
+		79612591261F2D7F00F8EA47 /* TobemIpsumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TobemIpsumApp.swift; sourceTree = "<group>"; };
 		79612593261F2D7F00F8EA47 /* MainViewSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewSwitcher.swift; sourceTree = "<group>"; };
 		79612595261F2D8500F8EA47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79612598261F2D8500F8EA47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 		79612590261F2D7F00F8EA47 /* Tobem Ipsum */ = {
 			isa = PBXGroup;
 			children = (
-				79612591261F2D7F00F8EA47 /* Tobem_IpsumApp.swift */,
+				79612591261F2D7F00F8EA47 /* TobemIpsumApp.swift */,
 				796125CE261F2DE400F8EA47 /* AppDelegate.swift */,
 				7961259A261F2D8500F8EA47 /* Info.plist */,
 				7961259B261F2D8500F8EA47 /* Tobem_Ipsum.entitlements */,
@@ -212,6 +212,7 @@
 				7961258A261F2D7F00F8EA47 /* Sources */,
 				7961258B261F2D7F00F8EA47 /* Frameworks */,
 				7961258C261F2D7F00F8EA47 /* Resources */,
+				791206822620768A008FF6CF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -326,6 +327,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		791206822620768A008FF6CF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7961258A261F2D7F00F8EA47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -337,7 +358,7 @@
 				796125C5261F2D8C00F8EA47 /* StringGenerator.swift in Sources */,
 				7912066C26206D5D008FF6CF /* Vocabulary.swift in Sources */,
 				796125C7261F2D8C00F8EA47 /* InputView.swift in Sources */,
-				79612592261F2D7F00F8EA47 /* Tobem_IpsumApp.swift in Sources */,
+				79612592261F2D7F00F8EA47 /* TobemIpsumApp.swift in Sources */,
 				796125DD261F312200F8EA47 /* MainViewController.swift in Sources */,
 				7912066626206CD2008FF6CF /* DictionaryPicker.swift in Sources */,
 				796125C6261F2D8C00F8EA47 /* OutputView.swift in Sources */,

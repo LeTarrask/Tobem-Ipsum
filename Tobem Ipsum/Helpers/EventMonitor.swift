@@ -23,6 +23,7 @@ class EventMonitor {
     }
 
     public func start() {
+        // swiftlint:disable force_cast
         monitor = NSEvent.addGlobalMonitorForEvents(matching: mask, handler: handler) as! NSObject
     }
 
