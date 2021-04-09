@@ -38,6 +38,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* To Jessier Quirino for his amazing words.
-* Brisa, for her inspiration
-* [Anagh Sharma](https://www.anaghsharma.com/blog/macos-menu-bar-app-with-swiftui/)
+* Many thanks to Jessier Quirino for his amazing words.
+* Also to Monty Python, for everything.
+* To Brisa, for her inspiration
+* To [Anagh Sharma](https://www.anaghsharma.com/blog/macos-menu-bar-app-with-swiftui/), for the tutorial on creating a Status Bar with SwiftUI.
