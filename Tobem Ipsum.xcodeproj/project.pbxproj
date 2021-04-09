@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7912066626206CD2008FF6CF /* DictionaryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912066526206CD2008FF6CF /* DictionaryPicker.swift */; };
+		7912066C26206D5D008FF6CF /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912066B26206D5D008FF6CF /* Vocabulary.swift */; };
+		7912067726206E67008FF6CF /* EnumPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912067626206E67008FF6CF /* EnumPicker.swift */; };
 		79612592261F2D7F00F8EA47 /* Tobem_IpsumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79612591261F2D7F00F8EA47 /* Tobem_IpsumApp.swift */; };
-		79612594261F2D7F00F8EA47 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79612593261F2D7F00F8EA47 /* ContentView.swift */; };
+		79612594261F2D7F00F8EA47 /* MainViewSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79612593261F2D7F00F8EA47 /* MainViewSwitcher.swift */; };
 		79612596261F2D8500F8EA47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79612595261F2D8500F8EA47 /* Assets.xcassets */; };
 		79612599261F2D8500F8EA47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79612598261F2D8500F8EA47 /* Preview Assets.xcassets */; };
 		796125A5261F2D8500F8EA47 /* Tobem_IpsumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796125A4261F2D8500F8EA47 /* Tobem_IpsumTests.swift */; };
@@ -40,9 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7912066526206CD2008FF6CF /* DictionaryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryPicker.swift; sourceTree = "<group>"; };
+		7912066B26206D5D008FF6CF /* Vocabulary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vocabulary.swift; sourceTree = "<group>"; };
+		7912067626206E67008FF6CF /* EnumPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumPicker.swift; sourceTree = "<group>"; };
 		7961258E261F2D7F00F8EA47 /* Tobem Ipsum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tobem Ipsum.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79612591261F2D7F00F8EA47 /* Tobem_IpsumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tobem_IpsumApp.swift; sourceTree = "<group>"; };
-		79612593261F2D7F00F8EA47 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		79612593261F2D7F00F8EA47 /* MainViewSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewSwitcher.swift; sourceTree = "<group>"; };
 		79612595261F2D8500F8EA47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79612598261F2D8500F8EA47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7961259A261F2D8500F8EA47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +93,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7912066A26206D35008FF6CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7912066B26206D5D008FF6CF /* Vocabulary.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7912067B26206F71008FF6CF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				796125DC261F312200F8EA47 /* MainViewController.swift */,
+				796125D4261F2E3D00F8EA47 /* StatusBarController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		79612585261F2D7F00F8EA47 = {
 			isa = PBXGroup;
 			children = (
@@ -114,9 +137,11 @@
 				796125CE261F2DE400F8EA47 /* AppDelegate.swift */,
 				7961259A261F2D8500F8EA47 /* Info.plist */,
 				7961259B261F2D8500F8EA47 /* Tobem_Ipsum.entitlements */,
-				796125C0261F2D8C00F8EA47 /* ViewModel */,
 				796125C2261F2D8C00F8EA47 /* Views */,
+				796125C0261F2D8C00F8EA47 /* ViewModel */,
+				7912067B26206F71008FF6CF /* Controllers */,
 				796125D3261F2E3D00F8EA47 /* Helpers */,
+				7912066A26206D35008FF6CF /* Model */,
 				79612595261F2D8500F8EA47 /* Assets.xcassets */,
 				79612597261F2D8500F8EA47 /* Preview Content */,
 			);
@@ -160,9 +185,10 @@
 		796125C2261F2D8C00F8EA47 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				79612593261F2D7F00F8EA47 /* ContentView.swift */,
+				79612593261F2D7F00F8EA47 /* MainViewSwitcher.swift */,
 				796125C4261F2D8C00F8EA47 /* InputView.swift */,
 				796125C3261F2D8C00F8EA47 /* OutputView.swift */,
+				7912066526206CD2008FF6CF /* DictionaryPicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,8 +196,7 @@
 		796125D3261F2E3D00F8EA47 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				796125DC261F312200F8EA47 /* MainViewController.swift */,
-				796125D4261F2E3D00F8EA47 /* StatusBarController.swift */,
+				7912067626206E67008FF6CF /* EnumPicker.swift */,
 				796125D5261F2E3D00F8EA47 /* EventMonitor.swift */,
 			);
 			path = Helpers;
@@ -308,12 +333,15 @@
 			files = (
 				796125CF261F2DE400F8EA47 /* AppDelegate.swift in Sources */,
 				796125D6261F2E3D00F8EA47 /* StatusBarController.swift in Sources */,
-				79612594261F2D7F00F8EA47 /* ContentView.swift in Sources */,
+				79612594261F2D7F00F8EA47 /* MainViewSwitcher.swift in Sources */,
 				796125C5261F2D8C00F8EA47 /* StringGenerator.swift in Sources */,
+				7912066C26206D5D008FF6CF /* Vocabulary.swift in Sources */,
 				796125C7261F2D8C00F8EA47 /* InputView.swift in Sources */,
 				79612592261F2D7F00F8EA47 /* Tobem_IpsumApp.swift in Sources */,
 				796125DD261F312200F8EA47 /* MainViewController.swift in Sources */,
+				7912066626206CD2008FF6CF /* DictionaryPicker.swift in Sources */,
 				796125C6261F2D8C00F8EA47 /* OutputView.swift in Sources */,
+				7912067726206E67008FF6CF /* EnumPicker.swift in Sources */,
 				796125D7261F2E3D00F8EA47 /* EventMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
