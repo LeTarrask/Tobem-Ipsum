@@ -13,8 +13,13 @@ struct TobemIpsumApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     var body: some Scene {
-        WindowGroup {
-            MainViewSwitcher()
+        Group {
+            WindowGroup {
+                MainViewSwitcher()
+            }
+            
+            // TO DO: Implement MenuBarExtra and make this app for OS 13 only
+            // https://sarunw.com/posts/swiftui-menu-bar-app/#add-a-menu-bar-extra
         }
     }
 }
