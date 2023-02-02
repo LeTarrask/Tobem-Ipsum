@@ -1,6 +1,6 @@
 # Tobem Ipsum
 
-A simple Lorem Ipsun generator in your Status Bar for Mac OS written in SwiftUI. 
+A simple Lorem Ipsun generator in your Status Bar for Mac OS written in SwiftUI.
 
 The first dictionary uses the words from [Jessier Quirino's sketch Matuto doente das partes](https://www.youtube.com/watch?v=UunT1yZPUxs) poem-sketch.
 
@@ -41,4 +41,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Many thanks to Jessier Quirino for his amazing words.
 * Also to Monty Python, for everything.
 * To Brisa, for her inspiration
-* To [Anagh Sharma](https://www.anaghsharma.com/blog/macos-menu-bar-app-with-swiftui/), for the tutorial on creating a Status Bar with SwiftUI.
