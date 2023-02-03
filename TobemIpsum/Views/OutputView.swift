@@ -11,10 +11,9 @@ struct OutputView: View {
     @ObservedObject var generator: StringGenerator
 
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text(generator.generatedText)
                 .lineLimit(nil)
-                .padding()
             HStack {
                 Button("Generate other") {
                     generator.reset()
@@ -25,8 +24,8 @@ struct OutputView: View {
                     pasteboard.declareTypes([.string], owner: nil)
                     pasteboard.setString(generator.generatedText, forType: .string)
                 }
-            }.padding()
-        }.frame(width: 400, alignment: .center)
+            }
+        }
     }
 }
 

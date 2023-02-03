@@ -13,7 +13,7 @@ struct MainViewSwitcher: View {
     @State var setUp: Bool = false
 
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             if setUp {
                 DictionaryPicker(generator: generator, vocab: generator.vocabulary, setUp: $setUp)
             } else {
@@ -23,18 +23,11 @@ struct MainViewSwitcher: View {
                     OutputView(generator: generator)
                 }
             }
-            HStack {
-                Button { setUp.toggle() } label: {
-                    Text("Change dictionary")
-                                .font(.caption)
-                                .fontWeight(.semibold)
-                }
-                Button { NSApplication.shared.terminate(self) } label: {
-                    Text("Quit App")
-                        .font(.caption)
-                        .fontWeight(.semibold)
-                }
-            }.padding()
+            Button { setUp.toggle() } label: {
+                Text("Change dictionary")
+                            .font(.caption)
+                            .fontWeight(.semibold)
+            }
         }
     }
 }

@@ -15,17 +15,15 @@ struct DictionaryPicker: View {
     @Binding var setUp: Bool
 
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text("Choose your dictionary")
                 .font(.headline)
             EnumPicker(selection: $vocab, label: Text(vocab.description))
             Button("Save") {
                 generator.choseVocabulary(dict: vocab)
                 setUp.toggle()
-            }.padding()
+            }
         }
-        .padding()
-        .frame(width: 300)
     }
 }
 

@@ -95,10 +95,10 @@
 		793747B2298D3FDE005C7280 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				793747B3298D3FDE005C7280 /* OutputView.swift */,
 				793747B4298D3FDE005C7280 /* MainViewSwitcher.swift */,
 				793747B5298D3FDE005C7280 /* DictionaryPicker.swift */,
 				793747B6298D3FDE005C7280 /* InputView.swift */,
+				793747B3298D3FDE005C7280 /* OutputView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

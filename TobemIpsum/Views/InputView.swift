@@ -15,10 +15,10 @@ struct InputView: View {
     @ObservedObject var generator: StringGenerator
 
     var body: some View {
-        VStack(alignment: .center) {
+        VStack(alignment: .leading) {
             Text("Create your random text")
                 .font(.headline)
-                .padding()
+
             Stepper("Words: \(words)",
                     value: $words, in: 1...10)
 
@@ -32,8 +32,8 @@ struct InputView: View {
 
             Button("Generate Text") {
                 generator.generate(vocabs: words, sentences: sentences, paragraphs: paragraphs)
-            }.padding()
-        }.frame(width: 200, height: 170, alignment: .center)
+            }
+        }.frame(width: 200, height: 170)
     }
 }
 

@@ -9,14 +9,20 @@ import SwiftUI
 
 @main
 struct TobemIpsumApp: App {
-    @State var icon: String = "🤯"
+    @ObservedObject var generator: StringGenerator = StringGenerator()
     
     var body: some Scene {
-        
-        MenuBarExtra(icon, systemImage: "tray"){
-            Button("GPT Query"){
-                
+        //// image: "cy"
+        MenuBarExtra("TobemIpsum", systemImage: "tray") {
+            
+            MainViewSwitcher()
+            
+            Divider()
+            
+            Button { NSApplication.shared.terminate(self) } label: {
+                Text("Quit App")
             }
         }
+        .menuBarExtraStyle(.window)
     }
 }
