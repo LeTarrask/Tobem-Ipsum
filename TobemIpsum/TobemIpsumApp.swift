@@ -12,8 +12,7 @@ struct TobemIpsumApp: App {
     @ObservedObject var generator: StringGenerator = StringGenerator()
     
     var body: some Scene {
-        //// image: "cy"
-        MenuBarExtra("TobemIpsum", systemImage: "tray") {
+        MenuBarExtra("TobemIpsum", systemImage: "circle.hexagonpath") {
             
             MainViewSwitcher()
             
