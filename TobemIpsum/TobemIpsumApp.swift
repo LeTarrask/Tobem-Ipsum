@@ -21,6 +21,7 @@ struct TobemIpsumApp: App {
             Button { NSApplication.shared.terminate(self) } label: {
                 Text("Quit App")
             }
+            .padding()
         }
         .menuBarExtraStyle(.window)
     }

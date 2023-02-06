@@ -52,17 +52,18 @@ final class StringGenerator: ObservableObject {
         return sentence.filter {$0 != "" }.joined(separator: ", ").capitalizingFirstLetter()+". "
     }
 
-    func generate(vocabs: Int, sentences: Int, paragraphs: Int) {
-        if vocabs > 0 {
-            generatedText = createSentence(with: vocabs)
-        } else if sentences > 0 {
-            generatedText = createParagraph(with: sentences)
-        } else if paragraphs > 0 {
-            var fullText = ""
+    func generate(words: Int, sentences: Int, paragraphs: Int) {
+        reset()
+        if words > 0 {
+            generatedText = createSentence(with: words) + "\n"
+        }
+        if sentences > 0 {
+            generatedText += createParagraph(with: sentences) + "\n"
+        }
+        if paragraphs > 0 {
             for _ in 1...paragraphs {
-                fullText += createParagraph(with: 5) + "\n"
+                generatedText += createParagraph(with: 5) + "\n"
             }
-            generatedText = fullText
         }
     }
 

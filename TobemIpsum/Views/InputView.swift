@@ -20,20 +20,18 @@ struct InputView: View {
                 .font(.headline)
 
             Stepper("Words: \(words)",
-                    value: $words, in: 1...10)
+                    value: $words, in: 0...10)
 
             Stepper("Sentences: \(sentences)",
-                    value: $sentences, in: 1...10)
+                    value: $sentences, in: 0...10)
 
             Stepper("Paragraphs: \(paragraphs)",
-                    value: $paragraphs, in: 1...10)
-
-            Spacer()
+                    value: $paragraphs, in: 0...10)
 
             Button("Generate Text") {
-                generator.generate(vocabs: words, sentences: sentences, paragraphs: paragraphs)
+                generator.generate(words: words, sentences: sentences, paragraphs: paragraphs)
             }
-        }.frame(width: 200, height: 170)
+        }
     }
 }
 

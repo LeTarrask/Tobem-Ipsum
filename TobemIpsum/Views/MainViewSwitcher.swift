@@ -13,21 +13,18 @@ struct MainViewSwitcher: View {
     @State var setUp: Bool = false
 
     var body: some View {
-        VStack(alignment: .leading) {
-            if setUp {
-                DictionaryPicker(generator: generator, vocab: generator.vocabulary, setUp: $setUp)
-            } else {
-                if generator.generatedText == "" {
-                    InputView(generator: generator)
-                } else {
+        
+        ScrollView {
+            VStack(alignment: .leading) {
+                InputView(paragraphs: 1, generator: generator)
+                
+                if generator.generatedText != "" {
                     OutputView(generator: generator)
                 }
-            }
-            Button { setUp.toggle() } label: {
-                Text("Change dictionary")
-                            .font(.caption)
-                            .fontWeight(.semibold)
-            }
+                
+                DictionaryPicker(generator: generator, vocab: generator.vocabulary, setUp: $setUp)
+                
+            }.padding()
         }
     }
 }
